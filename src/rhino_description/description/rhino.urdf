@@ -320,7 +320,7 @@
         <child link="engranaje_muneca"/>
         <origin xyz="0.033 0 -0.06"/>
         <axis xyz="0 0 1"/>
-        <!-- <limit lower="-3.14" upper="3.14" effort="1000.0" velocity="0.5"/> -->
+
     </joint>
     <!-- <link name="mano">
         <visual>
