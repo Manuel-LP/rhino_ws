@@ -1,0 +1,28 @@
+
+Principal
+ver como fnuciona la comunicacion rx y tx,
+Limites fisicos
+Ceros en el urdf
+Calcular Fmas de lectura de ejes
+Velocidades en baudios
+........................................
+Teleoperacion
+Comandar en mensajes de ros en simulacion
+moveit
+-----------------------------------------------------
+
+INTRUCTORS GUIDE
+ 
+    1-13 Motor gear ratio
+    2-15 aparece rango, muy nada que ver,, tambien dice que mc para ejecutar movimientos
+    2-17 como modificar velocidad del pendant
+    2-19/20 modo relativo y chars para configurarlo
+    2-21 Modo eje cartesiano
+    2-35 griper va de 0 a 240
+    2-46 Ejes dependientes
+    2-115 mmuchos seriales
+    lo deje en cqp 3
+-----------------------------------------------------
+OWNERS MANUAL
+    02-2 Y 02-3 ESPECIFICACIONES importanes
+    

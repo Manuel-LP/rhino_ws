@@ -1,0 +1,4 @@
+[console_scripts]
+JointControl = rhino_description.JointControl:main
+NewControl = rhino_description.NewControl:main
+SerialToJointState = rhino_description.joint:main

@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rhino">
+
+    <material name="blue">
+        <color rgba="0 0 0.8 1"/>
+    </material>
+    <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+    <material name="white">
+        <color rgba="1 1 1 1"/>
+    </material>
+
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <box size="1.0 0.8 0.1"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+    </link>
+
+    <link name="cuadrado_1">
+        <visual>
+            <geometry>
+                <!-- El tamaño del cuadrado, altura = 0.2 (mitad del largo del tronco) -->
+                <box size="0.4 0.07 0.2"/>
+            </geometry>
+            <material name="white"/>
+            <!-- Ajusta la posición según sea necesario -->
+            <origin rpy="0 0 0" xyz="-0.15 0 0.1"/>
+        </visual>
+    </link>
+
+    <joint name="base_cuadrado1" type="fixed">
+        <parent link="base_link"/>
+        <child link="cuadrado_1"/>
+        <origin xyz="0 0.08 0"/>
+    </joint>
+
+    <link name="cuadrado_2">
+        <visual>
+            <geometry>
+                <!-- El tamaño del cuadrado, altura = 0.2 (mitad del largo del tronco) -->
+                <box size="0.4 0.07 0.2"/>
+            </geometry>
+            <material name="white"/>
+            <!-- Ajusta la posición según sea necesario -->
+            <origin rpy="0 0 0" xyz="-0.15 0 0.1"/>
+        </visual>
+    </link>
+
+    <joint name="base_cuadrado2" type="fixed">
+        <parent link="base_link"/>
+        <child link="cuadrado_2"/>
+        <origin xyz="0 -0.08 0"/>
+    </joint>
+
+    <link name="prueba">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.19"/>
+            <geometry>
+                <mesh filename="package://rhino_description/meshes/prueba.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+    </link>
+
+    <joint name="tronco_to_prueba" type="fixed">
+        <parent link="tronco"/>
+        <child link="prueba"/>
+        <origin xyz="-0.2 -0.06 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="prueba1">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.19"/>
+            <geometry>
+                <mesh filename="package://rhino_description/meshes/prueba.stl" scale="0.001 -0.001 0.001"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+    </link>
+
+    <joint name="tronco_to_prueba1" type="fixed">
+        <parent link="tronco"/>
+        <child link="prueba1"/>
+        <origin xyz="-0.2 0.06 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="tronco">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.4"/>
+            </geometry>
+            <material name="black"/>
+            <origin rpy="0 0 0" xyz="0 0 0.1"/>
+        </visual>
+    </link>
+
+    <joint name="base_tronco" type="revolute">
+        <parent link="base_link"/>
+        <child link="tronco"/>
+        <origin xyz="0 0 0.1"/>
+        <!-- Eje Z para permitir la rotación -->
+        <axis xyz="0 0 1"/>
+        <limit effort="1000.0" velocity="0.5" lower="-3.14" upper="3.14"></limit> 
+    </joint>
+
+    <link name="tuerca_der">
+        <visual>
+            <geometry>
+                <cylinder radius="0.1" length="0.01"/>
+            </geometry>
+            <origin rpy="1.57 1.57 0" xyz="0 0.05 0.3"/>
+        </visual> 
+    </link>
+
+    <joint name="tronco_to_tuerca_der" type="fixed">
+        <parent link="tronco"/>
+        <child link="tuerca_der"/>
+        <!-- Posición relativa a "tronco" -->
+        <origin xyz="0 0 0"/>
+    </joint>
+
+    <link name="tuerca_izq">
+        <visual>
+            <geometry>
+                <cylinder radius="0.1" length="0.01"/>
+            </geometry>
+            <origin rpy="-1.57 1.57 0" xyz="0 -0.05 0.3"/>
+        </visual> 
+    </link>
+
+    <joint name="tronco_to_tuerca_izq" type="fixed">
+        <parent link="tronco"/>
+        <child link="tuerca_izq"/>
+        <!-- Posición relativa a "tronco" -->
+        <origin xyz="0 0 0"/>
+    </joint>
+
+    <link name="rueda_de_tronco">
+        <visual>
+            <geometry>
+                <sphere radius="0.04"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="rueda_para_tronco" type="fixed">
+        <parent link="tronco"/>
+        <child link="rueda_de_tronco"/>
+        <origin xyz="0 0 0.33"/>
+    </joint>
+
+    <link name="brazo">
+        <visual>
+            <geometry>
+                <cylinder radius="0.03" length="0.3"/>
+            </geometry>
+            <material name="black"/>
+            <origin rpy="0 -0.66 0" xyz="-0.10 0 0.10"/>
+        </visual>
+    </link>
+
+    <joint name="hombro_brazo" type="revolute">
+        <parent link="rueda_de_tronco"/>
+        <child link="brazo"/>
+        <origin xyz="0 0 0"/>
+        <axis xyz="0 1 0"/> 
+        <!-- Límite de rotación de -180 a 180 grados -->
+        <limit effort="1000.0" velocity="0.5" lower="-0.9" upper="1.57"/>
+    </joint>
+
+    <link name="cubierta_brazo1">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.18"/>
+            <geometry>
+                <mesh filename="package://rhino_description/meshes/brazo.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+    </link>
+
+    <joint name="brazo_cubierto1" type="fixed">
+        <parent link="brazo"/>
+        <child link="cubierta_brazo1"/>
+        <origin xyz=" 0 -0.05 -0.2" rpy="0 0 0"/>
+    </joint>
+
+    <link name="cubierta_brazo2">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.18"/>
+            <geometry>
+                <mesh filename="package://rhino_description/meshes/brazo.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+    </link>
+
+    <joint name="brazo_cubierto2" type="fixed">
+        <parent link="brazo"/>
+        <child link="cubierta_brazo2"/>
+        <origin xyz=" 0 0.06 -0.2" rpy="0 0 0"/>
+    </joint>
+
+    <link name="codo">
+        <visual>
+            <geometry>
+                <sphere radius="0.03"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="codo_de_brazo" type="fixed">
+        <parent link="brazo"/>
+        <child link="codo"/>
+        <origin xyz="-0.2 0 0.23"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <link name="antebrazo">
+        <visual>
+            <geometry>
+                <cylinder radius="0.02" length="0.3"/>
+            </geometry>
+            <material name="black"/>
+            <origin rpy="0 1.5708 0" xyz="0.165 0 0.015"/>
+        </visual>
+    </link>
+
+    <joint name="codo_antebrazo" type="revolute">
+        <parent link="codo"/>
+        <child link="antebrazo"/>
+        <origin xyz="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="1.7" upper="2.5" effort="1000.0" velocity="0.5"/>
+    </joint>
+
+    <link name="cubierta_antebrazo1">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.18"/>
+            <geometry>
+                <mesh filename="package://rhino_description/meshes/antebrazo.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+    </link>
+
+    <joint name="antebrazo_cubierta1" type="fixed">
+        <parent link="antebrazo"/>
+        <child link="cubierta_antebrazo1"/>
+        <origin xyz=" 0 -0.04 -0.2" rpy="0 0 0"/>
+    </joint>
+
+    <link name="cubierta_antebrazo2">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.18"/>
+            <geometry>
+                <mesh filename="package://rhino_description/meshes/antebrazo.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+    </link>
+
+    <joint name="antebrazo_cubierto2" type="fixed">
+        <parent link="antebrazo"/>
+        <child link="cubierta_antebrazo2"/>
+        <origin xyz=" 0 0.04 -0.2" rpy="0 0 0"/>
+    </joint>
+
+    <link name="muneca_cil">
+        <visual>
+            <geometry>
+                <sphere radius="0.03"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="antebrazo_muneca" type="fixed">
+        <parent link="antebrazo"/>
+        <child link="muneca_cil"/>
+        <origin xyz="0.34 0 0.015"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.14" upper="3.14" effort="1000.0" velocity="0.5"/>
+    </joint>  
+
+    <link name="muneca">
+        <visual>
+            <geometry>
+                <box size="0.05 0.05 0.08"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0.033 0 -0.015"/>
+            <material name="black"/>
+        </visual>
+    </link>
+    <joint name="muneca" type="revolute">
+        <parent link="muneca_cil"/>
+        <child link="muneca"/>
+        <origin xyz="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.14" upper="3.14" effort="1000.0" velocity="0.5"/>
+    </joint>
+
+    <link name="engranaje_muneca">
+        <visual>
+            <geometry>
+            <mesh filename="package://rhino_description/meshes/Engranaje.stl" scale="0.001 0.001 0.001"/> 
+            </geometry>
+            <origin rpy="0 0 0" xyz="-0.031 -0.036 0"/>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <joint name="engranaje_giro" type="continuous">
+        <parent link="muneca"/>
+        <child link="engranaje_muneca"/>
+        <origin xyz="0.033 0 -0.06"/>
+        <axis xyz="0 0 1"/>
+        <!-- <limit lower="-3.14" upper="3.14" effort="1000.0" velocity="0.5"/> -->
+    </joint>
+    <!-- <link name="mano">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.2"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0.14"/>
+        </visual>
+    </link>
+
+    <joint name="muneca_mano" type="fixed">
+        <parent link="muneca"/>
+        <child link="mano"/>
+        <origin xyz="0 0 0"/>
+    </joint>
+
+    <link name="left_gripper">
+        <visual>
+            <origin rpy="0 -1.57 0" xyz="0 0 0.2"/>
+            <geometry>
+                <mesh filename="package://urdf_tutorial/meshes/l_finger.dae"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="gripper_izquierdo" type="revolute">
+        <parent link="muneca"/>
+        <child link="left_gripper"/>
+        <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+        <origin rpy="0 0 0" xyz="0 0.01 0"/>
+        <axis xyz="0.0 0.0 -1.0"/>
+    </joint>
+
+    <link name="right_gripper">
+        <visual>
+            <origin rpy="3.14 -1.57 0" xyz="0 0 0.2"/>
+            <geometry>
+                <mesh filename="package://urdf_tutorial/meshes/l_finger.dae"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="gripper_right" type="revolute">
+        <parent link="muneca"/>
+        <child link="right_gripper"/>
+        <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
+        <origin rpy="0 0 0" xyz="0 -0.01 0"/>
+        <axis xyz="0 0.0 1.0"/>
+    </joint> -->
+
+</robot>

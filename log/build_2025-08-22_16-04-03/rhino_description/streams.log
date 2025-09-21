@@ -1,0 +1,26 @@
+[2.301s] Invoking command in '/home/manolo/rhino_ws/src/rhino_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/manolo/rhino_ws/build/rhino_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/manolo/rhino_ws/install/rhino_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rhino_description build --build-base /home/manolo/rhino_ws/build/rhino_description/build install --record /home/manolo/rhino_ws/build/rhino_description/install.log --single-version-externally-managed install_data
+[2.722s] running egg_info
+[2.744s] writing ../../build/rhino_description/rhino_description.egg-info/PKG-INFO
+[2.747s] writing dependency_links to ../../build/rhino_description/rhino_description.egg-info/dependency_links.txt
+[2.747s] writing entry points to ../../build/rhino_description/rhino_description.egg-info/entry_points.txt
+[2.747s] writing requirements to ../../build/rhino_description/rhino_description.egg-info/requires.txt
+[2.748s] writing top-level names to ../../build/rhino_description/rhino_description.egg-info/top_level.txt
+[2.787s] reading manifest file '../../build/rhino_description/rhino_description.egg-info/SOURCES.txt'
+[2.788s] writing manifest file '../../build/rhino_description/rhino_description.egg-info/SOURCES.txt'
+[2.788s] running build
+[2.788s] running build_py
+[2.790s] copying rhino_description/NewControl.py -> /home/manolo/rhino_ws/build/rhino_description/build/lib/rhino_description
+[2.791s] running install
+[2.799s] running install_lib
+[2.819s] copying /home/manolo/rhino_ws/build/rhino_description/build/lib/rhino_description/NewControl.py -> /home/manolo/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description
+[2.820s] byte-compiling /home/manolo/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description/NewControl.py to NewControl.cpython-312.pyc
+[2.821s] running install_data
+[2.823s] running install_egg_info
+[2.847s] removing '/home/manolo/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description-0.0.0-py3.12.egg-info' (and everything under it)
+[2.847s] Copying ../../build/rhino_description/rhino_description.egg-info to /home/manolo/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description-0.0.0-py3.12.egg-info
+[2.848s] running install_scripts
+[2.983s] Installing JointControl script to /home/manolo/rhino_ws/install/rhino_description/lib/rhino_description
+[2.986s] Installing NewControl script to /home/manolo/rhino_ws/install/rhino_description/lib/rhino_description
+[2.986s] Installing SerialToJointState script to /home/manolo/rhino_ws/install/rhino_description/lib/rhino_description
+[2.987s] writing list of installed files to '/home/manolo/rhino_ws/build/rhino_description/install.log'
+[3.017s] Invoked command in '/home/manolo/rhino_ws/src/rhino_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/manolo/rhino_ws/build/rhino_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/manolo/rhino_ws/install/rhino_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rhino_description build --build-base /home/manolo/rhino_ws/build/rhino_description/build install --record /home/manolo/rhino_ws/build/rhino_description/install.log --single-version-externally-managed install_data

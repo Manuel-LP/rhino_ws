@@ -1,0 +1,80 @@
+[0.000000] (-) TimerEvent: {}
+[0.000359] (rhino_description) JobQueued: {'identifier': 'rhino_description', 'dependencies': OrderedDict()}
+[0.002642] (rhino_description) JobStarted: {'identifier': 'rhino_description'}
+[0.099363] (-) TimerEvent: {}
+[0.200013] (-) TimerEvent: {}
+[0.302249] (-) TimerEvent: {}
+[0.402815] (-) TimerEvent: {}
+[0.503342] (-) TimerEvent: {}
+[0.603946] (-) TimerEvent: {}
+[0.704563] (-) TimerEvent: {}
+[0.805192] (-) TimerEvent: {}
+[0.905667] (-) TimerEvent: {}
+[1.006288] (-) TimerEvent: {}
+[1.106816] (-) TimerEvent: {}
+[1.207384] (-) TimerEvent: {}
+[1.308258] (-) TimerEvent: {}
+[1.408819] (-) TimerEvent: {}
+[1.509396] (-) TimerEvent: {}
+[1.609913] (-) TimerEvent: {}
+[1.710592] (-) TimerEvent: {}
+[1.811316] (-) TimerEvent: {}
+[1.912185] (-) TimerEvent: {}
+[2.012823] (-) TimerEvent: {}
+[2.113396] (-) TimerEvent: {}
+[2.214285] (-) TimerEvent: {}
+[2.315662] (-) TimerEvent: {}
+[2.416848] (-) TimerEvent: {}
+[2.517625] (-) TimerEvent: {}
+[2.618451] (-) TimerEvent: {}
+[2.719452] (-) TimerEvent: {}
+[2.820113] (-) TimerEvent: {}
+[2.920900] (-) TimerEvent: {}
+[3.022883] (-) TimerEvent: {}
+[3.123743] (-) TimerEvent: {}
+[3.134063] (rhino_description) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/rhino_description', 'build', '--build-base', '/home/manolo/rhino_ws/build/rhino_description/build', 'install', '--record', '/home/manolo/rhino_ws/build/rhino_description/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/manolo/rhino_ws/src/rhino_description', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'manolo', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/manolo', 'OLDPWD': '/home/manolo', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3099', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/manolo/rhino_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'manolo', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'manolo', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/home/manolo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/manolo-Cyborg-15-A13VE:@/tmp/.ICE-unix/2832,unix/manolo-Cyborg-15-A13VE:/tmp/.ICE-unix/2832', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/64a9bc8b_2b6a_4ff3_af8e_74cca488e3c7', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.171', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/manolo/rhino_ws/install/rhino_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/manolo/rhino_ws/build/rhino_description', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'PYTHONPATH': '/home/manolo/rhino_ws/build/rhino_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/manolo/rhino_ws/install/rhino_description/lib/python3.12/site-packages:/home/manolo/rhino_ws/install/rhino_description/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[3.223927] (-) TimerEvent: {}
+[3.324500] (-) TimerEvent: {}
+[3.425191] (-) TimerEvent: {}
+[3.525837] (-) TimerEvent: {}
+[3.626524] (-) TimerEvent: {}
+[3.727548] (-) TimerEvent: {}
+[3.829240] (-) TimerEvent: {}
+[3.930727] (-) TimerEvent: {}
+[4.031300] (-) TimerEvent: {}
+[4.132048] (-) TimerEvent: {}
+[4.164558] (rhino_description) StdoutLine: {'line': b'running egg_info\n'}
+[4.232342] (-) TimerEvent: {}
+[4.280460] (rhino_description) StdoutLine: {'line': b'writing ../../build/rhino_description/rhino_description.egg-info/PKG-INFO\n'}
+[4.281726] (rhino_description) StdoutLine: {'line': b'writing dependency_links to ../../build/rhino_description/rhino_description.egg-info/dependency_links.txt\n'}
+[4.282614] (rhino_description) StdoutLine: {'line': b'writing entry points to ../../build/rhino_description/rhino_description.egg-info/entry_points.txt\n'}
+[4.283452] (rhino_description) StdoutLine: {'line': b'writing requirements to ../../build/rhino_description/rhino_description.egg-info/requires.txt\n'}
+[4.284282] (rhino_description) StdoutLine: {'line': b'writing top-level names to ../../build/rhino_description/rhino_description.egg-info/top_level.txt\n'}
+[4.332859] (-) TimerEvent: {}
+[4.423785] (rhino_description) StdoutLine: {'line': b"reading manifest file '../../build/rhino_description/rhino_description.egg-info/SOURCES.txt'\n"}
+[4.425811] (rhino_description) StdoutLine: {'line': b"writing manifest file '../../build/rhino_description/rhino_description.egg-info/SOURCES.txt'\n"}
+[4.426083] (rhino_description) StdoutLine: {'line': b'running build\n'}
+[4.426387] (rhino_description) StdoutLine: {'line': b'running build_py\n'}
+[4.428541] (rhino_description) StdoutLine: {'line': b'running install\n'}
+[4.433010] (-) TimerEvent: {}
+[4.444571] (rhino_description) StdoutLine: {'line': b'running install_lib\n'}
+[4.497052] (rhino_description) StdoutLine: {'line': b'running install_data\n'}
+[4.498286] (rhino_description) StdoutLine: {'line': b'copying description/rhino.urdf -> /home/manolo/rhino_ws/install/rhino_description/share/rhino_description/description\n'}
+[4.499406] (rhino_description) StdoutLine: {'line': b'copying launch/test_rhino_rviz.launch.py -> /home/manolo/rhino_ws/install/rhino_description/share/rhino_description/launch\n'}
+[4.499909] (rhino_description) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.533229] (-) TimerEvent: {}
+[4.555988] (rhino_description) StdoutLine: {'line': b"removing '/home/manolo/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[4.556969] (rhino_description) StdoutLine: {'line': b'Copying ../../build/rhino_description/rhino_description.egg-info to /home/manolo/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description-0.0.0-py3.12.egg-info\n'}
+[4.559781] (rhino_description) StdoutLine: {'line': b'running install_scripts\n'}
+[4.633412] (-) TimerEvent: {}
+[4.735338] (-) TimerEvent: {}
+[4.836230] (-) TimerEvent: {}
+[4.926827] (rhino_description) StdoutLine: {'line': b'Installing JointControl script to /home/manolo/rhino_ws/install/rhino_description/lib/rhino_description\n'}
+[4.927601] (rhino_description) StdoutLine: {'line': b'Installing NewControl script to /home/manolo/rhino_ws/install/rhino_description/lib/rhino_description\n'}
+[4.927990] (rhino_description) StdoutLine: {'line': b'Installing SerialToJointState script to /home/manolo/rhino_ws/install/rhino_description/lib/rhino_description\n'}
+[4.928674] (rhino_description) StdoutLine: {'line': b"writing list of installed files to '/home/manolo/rhino_ws/build/rhino_description/install.log'\n"}
+[4.936413] (-) TimerEvent: {}
+[5.037133] (-) TimerEvent: {}
+[5.050468] (rhino_description) CommandEnded: {'returncode': 0}
+[5.121533] (rhino_description) JobEnded: {'identifier': 'rhino_description', 'rc': 0}
+[5.125854] (-) EventReactorShutdown: {}
