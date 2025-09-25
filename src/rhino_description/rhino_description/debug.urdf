@@ -236,7 +236,7 @@
         <child link="antebrazo"/>
         <origin xyz="0 0 0"/>
         <axis xyz="0 1 0"/>
-        <limit lower="1.7" upper="2.5" effort="1000.0" velocity="0.5"/>
+        <limit lower="-3.14" upper="3.14" effort="1000.0" velocity="0.5"/>
     </joint>
 
     <link name="cubierta_antebrazo1">
@@ -323,7 +323,8 @@
         <axis xyz="0 0 1"/>
         <!-- <limit lower="-3.14" upper="3.14" effort="1000.0" velocity="0.5"/> -->
     </joint>
-    <!-- <link name="mano">
+
+    <link name="mano">
         <visual>
             <geometry>
                 <cylinder radius="0.01" length="0.2"/>
@@ -333,43 +334,43 @@
     </link>
 
     <joint name="muneca_mano" type="fixed">
-        <parent link="muneca"/>
+        <parent link="engranaje_muneca"/>
         <child link="mano"/>
-        <origin xyz="0 0 0"/>
+        <origin xyz="0 0 -0.23"/>
     </joint>
 
     <link name="left_gripper">
         <visual>
-            <origin rpy="0 -1.57 0" xyz="0 0 0.2"/>
+            <origin rpy="0 1.57 0" xyz="0 0 -0.2"/>
             <geometry>
-                <mesh filename="package://urdf_tutorial/meshes/l_finger.dae"/>
+                <mesh filename="l_finger.dae"/>
             </geometry>
         </visual>
     </link>
 
     <joint name="gripper_izquierdo" type="revolute">
-        <parent link="muneca"/>
+        <parent link="engranaje_muneca"/>
         <child link="left_gripper"/>
         <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
         <origin rpy="0 0 0" xyz="0 0.01 0"/>
-        <axis xyz="0.0 0.0 -1.0"/>
+        <axis xyz="-1.0 0.0 0.0"/>
     </joint>
 
     <link name="right_gripper">
         <visual>
-            <origin rpy="3.14 -1.57 0" xyz="0 0 0.2"/>
+            <origin rpy="3.14 1.57 0" xyz="0 0 -0.2"/>
             <geometry>
-                <mesh filename="package://urdf_tutorial/meshes/l_finger.dae"/>
+                <mesh filename="l_finger.dae"/>
             </geometry>
         </visual>
     </link>
 
     <joint name="gripper_right" type="revolute">
-        <parent link="muneca"/>
+        <parent link="engranaje_muneca"/>
         <child link="right_gripper"/>
         <limit effort="1000.0" lower="-0.38" upper="0" velocity="0.5"/>
         <origin rpy="0 0 0" xyz="0 -0.01 0"/>
-        <axis xyz="0 0.0 1.0"/>
-    </joint> -->
+        <axis xyz="10 0 0"/>
+    </joint>
 
 </robot>
