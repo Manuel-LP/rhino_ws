@@ -56,7 +56,7 @@
         <origin xyz="0 -0.08 0"/>
     </joint>
 
-    <link name="prueba">
+    <!-- <link name="prueba">
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0.19"/>
             <geometry>
@@ -86,7 +86,7 @@
         <parent link="tronco"/>
         <child link="prueba1"/>
         <origin xyz="-0.2 0.06 0" rpy="0 0 0"/>
-    </joint>
+    </joint> -->
 
     <link name="tronco">
         <visual>
@@ -177,7 +177,8 @@
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0.18"/>
             <geometry>
-                <mesh filename="package://rhino_description/meshes/brazo.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="brazo.stl" scale="0.001 0.001 0.001"/>
+                <!-- <mesh filename="package://rhino_description/meshes/brazo.stl" scale="0.001 0.001 0.001"/> -->
             </geometry>
             <material name="white"/>
         </visual>
@@ -193,7 +194,8 @@
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0.18"/>
             <geometry>
-                <mesh filename="package://rhino_description/meshes/brazo.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="brazo.stl" scale="0.001 0.001 0.001"/>
+                <!-- <mesh filename="package://rhino_description/meshes/brazo.stl" scale="0.001 0.001 0.001"/> -->
             </geometry>
             <material name="white"/>
         </visual>
@@ -243,7 +245,8 @@
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0.18"/>
             <geometry>
-                <mesh filename="package://rhino_description/meshes/antebrazo.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="antebrazo.stl" scale="0.001 0.001 0.001"/>
+                <!-- <mesh filename="package://rhino_description/meshes/antebrazo.stl" scale="0.001 0.001 0.001"/> -->
             </geometry>
             <material name="white"/>
         </visual>
@@ -259,7 +262,8 @@
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0.18"/>
             <geometry>
-                <mesh filename="package://rhino_description/meshes/antebrazo.stl" scale="0.001 0.001 0.001"/>
+                <mesh filename="antebrazo.stl" scale="0.001 0.001 0.001"/>
+                <!-- <mesh filename="package://rhino_description/meshes/antebrazo.stl" scale="0.001 0.001 0.001"/> -->
             </geometry>
             <material name="white"/>
         </visual>
@@ -343,7 +347,8 @@
         <visual>
             <origin rpy="0 1.57 0" xyz="0 0 -0.2"/>
             <geometry>
-                <mesh filename="l_finger.dae"/>
+                <!-- <mesh filename="l_finger.dae"/> -->
+                <mesh filename="package://rhino_description/meshes/l_finger.dae"/>
             </geometry>
         </visual>
     </link>
@@ -360,7 +365,8 @@
         <visual>
             <origin rpy="3.14 1.57 0" xyz="0 0 -0.2"/>
             <geometry>
-                <mesh filename="l_finger.dae"/>
+                <!-- <mesh filename="l_finger.dae"/> -->
+                <mesh filename="package://rhino_description/meshes/l_finger.dae"/>
             </geometry>
         </visual>
     </link>
