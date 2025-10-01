@@ -11,9 +11,9 @@ setup.py
 ../../build/rhino_description/rhino_description.egg-info/zip-safe
 description/rhino.urdf
 launch/test_rhino_rviz.launch.py
-meshes/Engranaje.stl
 meshes/antebrazo.stl
 meshes/brazo.stl
+meshes/engranaje.stl
 meshes/prueba.stl
 resource/rhino_description
 rhino_description/JointControl.py

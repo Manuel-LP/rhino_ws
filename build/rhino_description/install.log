@@ -20,9 +20,9 @@
 /home/manolo/rhino_ws/install/rhino_description/share/rhino_description/package.xml
 /home/manolo/rhino_ws/install/rhino_description/share/rhino_description/description/rhino.urdf
 /home/manolo/rhino_ws/install/rhino_description/share/rhino_description/meshes/prueba.stl
-/home/manolo/rhino_ws/install/rhino_description/share/rhino_description/meshes/Engranaje.stl
 /home/manolo/rhino_ws/install/rhino_description/share/rhino_description/meshes/antebrazo.stl
 /home/manolo/rhino_ws/install/rhino_description/share/rhino_description/meshes/brazo.stl
+/home/manolo/rhino_ws/install/rhino_description/share/rhino_description/meshes/engranaje.stl
 /home/manolo/rhino_ws/install/rhino_description/share/rhino_description/launch/test_rhino_rviz.launch.py
 /home/manolo/rhino_ws/install/rhino_description/share/rhino_description/rviz/rhino.rviz
 /home/manolo/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description-0.0.0-py3.12.egg-info/zip-safe

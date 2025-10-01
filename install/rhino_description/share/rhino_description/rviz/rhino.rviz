@@ -1,14 +1,15 @@
 Panels:
   - Class: rviz_common/Displays
-    Help Height: 78
+    Help Height: 358
     Name: Displays
     Property Tree Widget:
       Expanded:
         - /Global Options1
         - /Status1
         - /RobotModel1
+        - /RobotModel1/Status1
       Splitter Ratio: 0.5
-    Tree Height: 559
+    Tree Height: 279
   - Class: rviz_common/Selection
     Name: Selection
   - Class: rviz_common/Tool Properties
@@ -75,15 +76,15 @@ Visualization Manager:
           Value: true
         cubierta_brazo2:
           Value: true
+        engranaje_muneca:
+          Value: true
         left_gripper:
           Value: true
         mano:
           Value: true
         muneca:
           Value: true
-        prueba:
-          Value: true
-        prueba1:
+        muneca_cil:
           Value: true
         right_gripper:
           Value: true
@@ -107,10 +108,6 @@ Visualization Manager:
           cuadrado_2:
             {}
           tronco:
-            prueba:
-              {}
-            prueba1:
-              {}
             rueda_de_tronco:
               brazo:
                 codo:
@@ -119,13 +116,15 @@ Visualization Manager:
                       {}
                     cubierta_antebrazo2:
                       {}
-                    muneca:
-                      left_gripper:
-                        {}
-                      mano:
-                        {}
-                      right_gripper:
-                        {}
+                    muneca_cil:
+                      muneca:
+                        engranaje_muneca:
+                          left_gripper:
+                            {}
+                          mano:
+                            {}
+                          right_gripper:
+                            {}
                 cubierta_brazo1:
                   {}
                 cubierta_brazo2:
@@ -204,11 +203,14 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        engranaje_muneca:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         left_gripper:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
         mano:
           Alpha: 1
           Show Axes: false
@@ -219,12 +221,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        prueba:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        prueba1:
+        muneca_cil:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -233,7 +230,6 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
         rueda_de_tronco:
           Alpha: 1
           Show Axes: false
@@ -308,7 +304,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 4.086756229400635
+      Distance: 1.7001011371612549
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -323,10 +319,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.610398530960083
+      Pitch: 0.28539854288101196
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.233572959899902
+      Yaw: 1.0603913068771362
     Saved: ~
 Window Geometry:
   Displays:
