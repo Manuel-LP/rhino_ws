@@ -10,6 +10,10 @@ Teleoperacion
 Comandar en mensajes de ros en simulacion
 moveit
 -----------------------------------------------------
+FUNCIONAMIENTO DE pendant
+
+mantener apretado y seguidamente apretar hace que vaaya mas rapido 
+------------------------------------------------------
 
 INTRUCTORS GUIDE
  
@@ -17,7 +21,7 @@ INTRUCTORS GUIDE
     2-15 aparece rango, muy nada que ver,, tambien dice que mc para ejecutar movimientos
     2-17 como modificar velocidad del pendant
     2-19/20 modo relativo y chars para configurarlo
-    2-21 Modo eje cartesiano
+    2-21 Modo eje cartesianotar
     2-35 griper va de 0 a 240
     2-46 Ejes dependientes
     2-115 mmuchos seriales
@@ -26,3 +30,4 @@ INTRUCTORS GUIDE
 OWNERS MANUAL
     02-2 Y 02-3 ESPECIFICACIONES importanes
     
+

@@ -14,6 +14,7 @@ launch/test_rhino_rviz.launch.py
 meshes/antebrazo.stl
 meshes/brazo.stl
 meshes/engranaje.stl
+meshes/mano.stl
 meshes/prueba.stl
 resource/rhino_description
 rhino_description/JointControl.py

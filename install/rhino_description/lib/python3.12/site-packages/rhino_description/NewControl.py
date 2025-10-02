@@ -12,7 +12,7 @@ class NewConrol(Node):
     def __init__(self):
         super().__init__('serial_to_joint_state')
         self.publisher_ = self.create_publisher(JointState, 'joint_states', 10)
-        self.timer = self.create_timer(0.01, self.timer_callback)  # Publicar cada 0.1 segundos
+        self.timer = self.create_timer(0.02, self.timer_callback)  # Publicar cada 0.02 segundos
 
 
         self.ser = serial.Serial(
@@ -23,13 +23,14 @@ class NewConrol(Node):
             stopbits=serial.STOPBITS_TWO,
             timeout=1
         )
-        self.motor_ids = ['F', 'E', 'D', 'C', 'P']#self.motor_ids = ['F', 'E', 'D', 'C', 'B']  # Identificadores de los motores
+        self.motor_ids = ['F', 'E', 'D', 'C', 'B', 'A']#self.motor_ids = ['F', 'E', 'D', 'C', 'B']  # Identificadores de los motores
         self.motor_specs = {
             'B': (-4558, 4558, 360),
             'C': (-1300, 11000, 250),#250
             'D': (6473,-3690,  180),#180
             'E': (-580, 4670, 150),
-            'F': (-3005, 3005, 350)
+            'F': (-3005, 3005, 350),
+            'A': (0, -240, 25)
             # 'C': (-2500, 4500, 250),
             # 'D': (4173, -2629, 180),
             # 'E': (-2500, 2500, 150),
@@ -59,17 +60,18 @@ class NewConrol(Node):
             elif motor_id == 'D':
                 joint_state_msg.name.append('codo_antebrazo')
             elif motor_id == 'C':
-                joint_state_msg.name.append('antebrazo_muneca')
-#    no esta         elif motor_id == 'B': joint_state_msg.name.append('giro_muneca')
-            else:
-                joint_state_msg.name.append('gripper_izquierdo')
-                joint_state_msg.name.append('gripper_right')
+                joint_state_msg.name.append('muneca')
+            elif motor_id == 'B':
+                joint_state_msg.name.append('engranaje_giro')
+            elif motor_id == 'A':{
+                joint_state_msg.name.append('gripper_izquierdo'),
+                joint_state_msg.name.append('gripper_right')}
 
         posiciones = []
         for motor_id in self.motor_ids:
             comando = f'PA,{motor_id}\n'.encode('utf-8')
             self.ser.write(comando)
-            time.sleep(0.1)
+            time.sleep(0.02)
             if self.ser.in_waiting > 0:
                 respuesta = self.ser.readline().decode('utf-8').strip()
                 self.get_logger().info(f'Respuesta del motor {motor_id}: {respuesta}')
@@ -81,9 +83,12 @@ class NewConrol(Node):
                     posicion_radianes = 0.0
                 posiciones.append(posicion_radianes)
                 self.get_logger().info(f'Respuesta del motor en radianes {motor_id}: {posicion_radianes}')
+                if motor_id == 'A':
+                    posiciones.append(posicion_radianes),
+                    self.get_logger().info(f'2Respuesta del motor en radianes {motor_id}: {posicion_radianes}')
+            
             else:
                 posiciones.append(0.0)  # Si no hay respuesta, asignar 0.0
-                posiciones.append(0.0)  # Para el gripper izquierdo
                 self.get_logger().info(f'Respuesta del motor en radianes {motor_id}: {posicion_radianes}')
         joint_state_msg.position = posiciones
         self.publisher_.publish(joint_state_msg)
