@@ -12,7 +12,7 @@ class NewConrol(Node):
     def __init__(self):
         super().__init__('serial_to_joint_state')
         self.publisher_ = self.create_publisher(JointState, 'joint_states', 10)
-        self.timer = self.create_timer(0.17, self.timer_callback)  # Publicar cada 0.02 segundos
+        self.timer = self.create_timer(0.2, self.timer_callback)  # Publicar cada 0.02 segundos
 
 
         self.ser = serial.Serial(
