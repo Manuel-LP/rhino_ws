@@ -1,0 +1,24 @@
+[0.495s] Invoking command in '/home/manulp/Desktop/rhino_ws/src/rhino_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/manulp/Desktop/rhino_ws/build/rhino_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rhino_description build --build-base /home/manulp/Desktop/rhino_ws/build/rhino_description/build install --record /home/manulp/Desktop/rhino_ws/build/rhino_description/install.log --single-version-externally-managed install_data
+[0.657s] running egg_info
+[0.669s] writing ../../build/rhino_description/rhino_description.egg-info/PKG-INFO
+[0.669s] writing dependency_links to ../../build/rhino_description/rhino_description.egg-info/dependency_links.txt
+[0.669s] writing entry points to ../../build/rhino_description/rhino_description.egg-info/entry_points.txt
+[0.669s] writing requirements to ../../build/rhino_description/rhino_description.egg-info/requires.txt
+[0.669s] writing top-level names to ../../build/rhino_description/rhino_description.egg-info/top_level.txt
+[0.691s] reading manifest file '../../build/rhino_description/rhino_description.egg-info/SOURCES.txt'
+[0.692s] writing manifest file '../../build/rhino_description/rhino_description.egg-info/SOURCES.txt'
+[0.692s] running build
+[0.692s] running build_py
+[0.692s] running install
+[0.696s] running install_lib
+[0.708s] running install_data
+[0.708s] copying launch/test_rhino_rviz.launch.py -> /home/manulp/Desktop/rhino_ws/install/rhino_description/share/rhino_description/launch
+[0.708s] running install_egg_info
+[0.720s] removing '/home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description-0.0.0-py3.12.egg-info' (and everything under it)
+[0.720s] Copying ../../build/rhino_description/rhino_description.egg-info to /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description-0.0.0-py3.12.egg-info
+[0.720s] running install_scripts
+[0.797s] Installing JointControl script to /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/rhino_description
+[0.797s] Installing NewControl script to /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/rhino_description
+[0.797s] Installing SerialToJointState script to /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/rhino_description
+[0.798s] writing list of installed files to '/home/manulp/Desktop/rhino_ws/build/rhino_description/install.log'
+[0.814s] Invoked command in '/home/manulp/Desktop/rhino_ws/src/rhino_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/manulp/Desktop/rhino_ws/build/rhino_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rhino_description build --build-base /home/manulp/Desktop/rhino_ws/build/rhino_description/build install --record /home/manulp/Desktop/rhino_ws/build/rhino_description/install.log --single-version-externally-managed install_data

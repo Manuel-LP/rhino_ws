@@ -19,6 +19,7 @@ meshes/prueba.stl
 resource/rhino_description
 rhino_description/JointControl.py
 rhino_description/JointStateToSerial.py
+rhino_description/Mewctrl.py
 rhino_description/NewControl.py
 rhino_description/Rhino_Menu.py
 rhino_description/__init__.py
