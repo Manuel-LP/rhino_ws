@@ -26,6 +26,8 @@ class SerialToJointState(Node):
             'F': (-3005, 3005, 350),
             'A': (-240, 0, 25)
         }
+        self.posicionAnterior=[0,0,0,0,0,0,0]
+        self.posicionAnterior_Index=0   
     def position_to_radians(self, position, min_position, max_position, degrees_of_rotation):
         # Calcular grados centrando el rango en 0
         degrees = (position ) * degrees_of_rotation / (max_position -   min_position)
@@ -54,12 +56,16 @@ class SerialToJointState(Node):
                 self.get_logger().info(f'Respuesta del motor {motor_id}: {respuesta}')
 
                 posiciones.append(posicion_radianes)
+                self.posicionAnterior[self.posicionAnterior_Index] = posicion_radianes
                 if motor_id == 'A':
                     posiciones.append(posicion_radianes)
+                    self.posicionAnterior
                     self.get_logger().info(f'2Respuesta del motor en radianes {motor_id}: {respuesta}')                   
+                self.posicionAnterior_Index += 1
             except ValueError:
-                posiciones.append(33333)  # Si no hay respuesta, asignar 0.0
+                posiciones.append(self.posicionAnterior[self.posicionAnterior_Index])  # Si no hay respuesta, asignar 0.0
                 self.get_logger().info('NULL')
+                self.posicionAnterior_Index += 1
 
         joint_state_msg = JointState()
         joint_state_msg.header.stamp = self.get_clock().now().to_msg()
