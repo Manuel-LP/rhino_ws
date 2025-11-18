@@ -75,7 +75,7 @@ def generate_launch_description():
                                 default_value='true',
                                 choices=['true', 'false'],
                                 description='Flag to enable joint_state_publisher_gui'),
-        joint_state_publisher_gui_node,
+        #joint_state_publisher_gui_node,
         robot_state_publisher_node,
         #SerialToJointState_node,
         rviz_node,

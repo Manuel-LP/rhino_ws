@@ -27,6 +27,7 @@ rhino_description/expo.py
 rhino_description/expo2.py
 rhino_description/joint.py
 rhino_description/rutinaa.py
+rhino_description/serialread.py
 rviz/rhino.rviz
 test/test_copyright.py
 test/test_flake8.py

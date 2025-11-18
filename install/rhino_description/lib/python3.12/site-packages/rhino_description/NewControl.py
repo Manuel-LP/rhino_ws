@@ -12,7 +12,7 @@ class NewConrol(Node):
     def __init__(self):
         super().__init__('serial_to_joint_state')
         self.publisher_ = self.create_publisher(JointState, 'joint_states', 10)
-        self.timer = self.create_timer(0.02, self.timer_callback)  # Publicar cada 0.02 segundos
+        self.timer = self.create_timer(0.2, self.timer_callback)  # Publicar cada 0.02 segundos
 
 
         self.ser = serial.Serial(
@@ -30,7 +30,7 @@ class NewConrol(Node):
             'D': (6473,-3690,  180),#180
             'E': (-580, 4670, 150),
             'F': (-3005, 3005, 350),
-            'A': (0, -240, 25)
+            'A': (-240, 0, 25)
             # 'C': (-2500, 4500, 250),
             # 'D': (4173, -2629, 180),
             # 'E': (-2500, 2500, 150),
@@ -71,7 +71,7 @@ class NewConrol(Node):
         for motor_id in self.motor_ids:
             comando = f'PA,{motor_id}\n'.encode('utf-8')
             self.ser.write(comando)
-            time.sleep(0.02)
+            time.sleep(0.0175)
             if self.ser.in_waiting > 0:
                 respuesta = self.ser.readline().decode('utf-8').strip()
                 self.get_logger().info(f'Respuesta del motor {motor_id}: {respuesta}')
@@ -89,7 +89,7 @@ class NewConrol(Node):
             
             else:
                 posiciones.append(0.0)  # Si no hay respuesta, asignar 0.0
-                self.get_logger().info(f'Respuesta del motor en radianes {motor_id}: {posicion_radianes}')
+                self.get_logger().info(f'Respuesta del motor cuando no toma {motor_id}')
         joint_state_msg.position = posiciones
         self.publisher_.publish(joint_state_msg)
 

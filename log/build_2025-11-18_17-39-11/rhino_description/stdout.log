@@ -1,0 +1,49 @@
+running egg_info
+writing ../../build/rhino_description/rhino_description.egg-info/PKG-INFO
+writing dependency_links to ../../build/rhino_description/rhino_description.egg-info/dependency_links.txt
+writing entry points to ../../build/rhino_description/rhino_description.egg-info/entry_points.txt
+writing requirements to ../../build/rhino_description/rhino_description.egg-info/requires.txt
+writing top-level names to ../../build/rhino_description/rhino_description.egg-info/top_level.txt
+reading manifest file '../../build/rhino_description/rhino_description.egg-info/SOURCES.txt'
+writing manifest file '../../build/rhino_description/rhino_description.egg-info/SOURCES.txt'
+running build
+running build_py
+copying rhino_description/NewControl.py -> /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description
+copying rhino_description/JointStateToSerial.py -> /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description
+copying rhino_description/expo.py -> /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description
+copying rhino_description/rutinaa.py -> /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description
+copying rhino_description/Mewctrl.py -> /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description
+copying rhino_description/serialread.py -> /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description
+copying rhino_description/expo2.py -> /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description
+copying rhino_description/Rhino_Menu.py -> /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description
+copying rhino_description/joint.py -> /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description
+running install
+running install_lib
+copying /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description/NewControl.py -> /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description
+copying /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description/JointStateToSerial.py -> /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description
+copying /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description/expo.py -> /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description
+copying /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description/rutinaa.py -> /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description
+copying /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description/Mewctrl.py -> /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description
+copying /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description/serialread.py -> /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description
+copying /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description/expo2.py -> /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description
+copying /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description/Rhino_Menu.py -> /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description
+copying /home/manulp/Desktop/rhino_ws/build/rhino_description/build/lib/rhino_description/joint.py -> /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description
+byte-compiling /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description/NewControl.py to NewControl.cpython-312.pyc
+byte-compiling /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description/JointStateToSerial.py to JointStateToSerial.cpython-312.pyc
+byte-compiling /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description/expo.py to expo.cpython-312.pyc
+byte-compiling /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description/rutinaa.py to rutinaa.cpython-312.pyc
+byte-compiling /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description/Mewctrl.py to Mewctrl.cpython-312.pyc
+byte-compiling /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description/serialread.py to serialread.cpython-312.pyc
+byte-compiling /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description/expo2.py to expo2.cpython-312.pyc
+byte-compiling /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description/Rhino_Menu.py to Rhino_Menu.cpython-312.pyc
+byte-compiling /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description/joint.py to joint.cpython-312.pyc
+running install_data
+copying launch/test_rhino_rviz.launch.py -> /home/manulp/Desktop/rhino_ws/install/rhino_description/share/rhino_description/launch
+running install_egg_info
+removing '/home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/rhino_description/rhino_description.egg-info to /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/python3.12/site-packages/rhino_description-0.0.0-py3.12.egg-info
+running install_scripts
+Installing JointControl script to /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/rhino_description
+Installing NewControl script to /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/rhino_description
+Installing SerialToJointState script to /home/manulp/Desktop/rhino_ws/install/rhino_description/lib/rhino_description
+writing list of installed files to '/home/manulp/Desktop/rhino_ws/build/rhino_description/install.log'
