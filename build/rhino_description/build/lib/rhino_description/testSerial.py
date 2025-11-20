@@ -15,7 +15,7 @@ class SerialToJointState(Node):
             bytesize=serial.SEVENBITS,
             parity=serial.PARITY_ODD,
             stopbits=serial.STOPBITS_TWO,
-            timeout=0.04
+            timeout=0.025
         )
         self.motor_ids = ['F', 'E', 'D', 'C', 'B', 'A']#self.motor_ids = ['F', 'E', 'D', 'C', 'B']  # Identificadores de los motores
         self.motor_specs = {
@@ -26,6 +26,8 @@ class SerialToJointState(Node):
             'F': (-3005, 3005, 350),
             'A': (-240, 0, 25)
         }
+        self.posicionAnterior=[0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+
     def position_to_radians(self, position, min_position, max_position, degrees_of_rotation):
         # Calcular grados centrando el rango en 0
         degrees = (position ) * degrees_of_rotation / (max_position -   min_position)
@@ -39,7 +41,7 @@ class SerialToJointState(Node):
 
 
     def leer_y_publicar(self):
-
+        indice=0
         posiciones = []
         for motor_id in self.motor_ids:
             comando = f'PA,{motor_id}\n'.encode('utf-8')
@@ -54,12 +56,16 @@ class SerialToJointState(Node):
                 self.get_logger().info(f'Respuesta del motor {motor_id}: {respuesta}')
 
                 posiciones.append(posicion_radianes)
+                self.posicionAnterior[indice] = posicion_radianes
                 if motor_id == 'A':
                     posiciones.append(posicion_radianes)
+                    self.posicionAnterior
                     self.get_logger().info(f'2Respuesta del motor en radianes {motor_id}: {respuesta}')                   
+                indice += 1
             except ValueError:
-                posiciones.append(33333)  # Si no hay respuesta, asignar 0.0
+                posiciones.append(self.posicionAnterior[indice])  # Si no hay respuesta, asignar 0.0
                 self.get_logger().info('NULL')
+                indice += 1
 
         joint_state_msg = JointState()
         joint_state_msg.header.stamp = self.get_clock().now().to_msg()
